@@ -1,6 +1,6 @@
-Nombre: Zamora Damian 
-
 Examen Parcial 1 – Programación Web II
+
+Nombre: Zamora Damian 
 
 Objetivo: 
 Desarrollar una aplicación web completa (frontend + consumo de API) que implemente un 
@@ -19,13 +19,16 @@ https://mockapi.io/clone/68c56790a712aaca2b68ad09
 ## Colecciones de postman
 
 Get All games
+
 ``curl --location 'https://68c56790a712aaca2b68ad08.mockapi.io/api/parcial1/games'``
 
 Delete game by Id
+
 ``curl --location --request DELETE 'https://68c56790a712aaca2b68ad08.mockapi.io/api/parcial1/games/4' \
 --data ''``
 
 Put game
+
 ``curl --location --request PUT 'https://68c56790a712aaca2b68ad08.mockapi.io/api/parcial1/games/4' \
 --header 'Content-Type: application/json' \
 --data '{
@@ -39,6 +42,10 @@ Put game
 }'``
 
 ## Capturas de pantalla 
+
+Demo
+
+https://www.youtube.com/watch?v=2tn8Y1ytNpg
 
 index.html
 
