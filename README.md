@@ -22,11 +22,11 @@ Get All games
 ``curl --location 'https://68c56790a712aaca2b68ad08.mockapi.io/api/parcial1/games'``
 
 Delete game by Id
-curl --location --request DELETE 'https://68c56790a712aaca2b68ad08.mockapi.io/api/parcial1/games/4' \
---data ''
+``curl --location --request DELETE 'https://68c56790a712aaca2b68ad08.mockapi.io/api/parcial1/games/4' \
+--data ''``
 
 Put game
-curl --location --request PUT 'https://68c56790a712aaca2b68ad08.mockapi.io/api/parcial1/games/4' \
+``curl --location --request PUT 'https://68c56790a712aaca2b68ad08.mockapi.io/api/parcial1/games/4' \
 --header 'Content-Type: application/json' \
 --data '{
     "name": "FIFA 17",
@@ -36,7 +36,7 @@ curl --location --request PUT 'https://68c56790a712aaca2b68ad08.mockapi.io/api/p
     "img": "https://img.redbull.com/images/c_limit,w_1500,h_1000/f_auto,q_auto/redbullcom/2016/09/20/1331818914269_2/fifa-17-marco-reus",
     "id": "2",
     "genero": "Other"
-}'
+}'``
 
 ## Capturas de pantalla 
 
