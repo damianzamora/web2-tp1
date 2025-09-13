@@ -15,7 +15,6 @@ Se conecta a una api alojada en mockApi, y su conexion se hace mediante la libre
 
 URL endpoint mockApi : 
 https://mockapi.io/clone/68c56790a712aaca2b68ad09
-https://68c56790a712aaca2b68ad08.mockapi.io/api/parcial1/:endpoint
 
 Colecciones de postman
 
