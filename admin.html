@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Two Players Shop - Admin</title>
+    <link rel="shortcut icon" href="/img/header/logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+    <!-- Libreria Axios para peticiones HTTP -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header class="mainHeader">
+        <div class="headerInfo">
+            <div class="headerLogo">
+                <a href="index.html"><img src="/img/header/logo.jpg"></a>
+            </div>
+            <div class="headerTitulo">
+                <p>Two Players Shop</p>
+            </div>
+            <div class="headerAccesos">
+                <img src="/img/header/carrito.jpg" class="imgFooter">
+                <img src="/img/header/inicio.jpg" class="imgFooter">
+            </div>
+        </div>
+        <nav class="headernav">
+            <div class="navHref"><a href="index.html">Productos</a></a></div>
+            <div class="navHref"><a href="admin.html"><b>Administrador</b></a></div>
+        </nav>
+</header>
+    <main>
+        <div class="mainAdmin">
+            <div class="filtrosAdmin">                               
+                <div>
+                    <input type="radio" name="radio" onclick="filtroTODOS()">
+                    <label class="labelFiltro">Todos</label>
+                </div>
+                <div>
+                    <input type="radio" name="radio" onclick="filtroPC()">
+                    <label class="labelFiltro">PC</label>
+                </div>
+                <div>
+                    <input type="radio" name="radio" onclick="filtroPS5()">
+                    <label class="labelFiltro">PS5</label>
+                </div>
+                <div>                
+                    <input type="radio" name="radio"  onclick="filtroMayorPrecio()"/>
+                    <label class="labelFiltro">Mayor precio</label>
+                </div>
+                <div>
+                    <input type="radio" name="radio"  onclick="filtroMenorPrecio()"/>
+                    <label class="labelFiltro">Menor precio</label>
+                </div>                             
+            </div>
+            <div class="divTableForm">
+                <div class="tableAdminDiv">
+                    <table class="content-table">
+                        <thead>
+                            <tr>
+                                <th class="tdocultar">Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Plataforma</th>
+                                <th class="tdocultar">Género</th>
+                                <th class="tdocultar">Descripción</th>
+                                <th colspan="2">Acciones</th>                                
+                            </tr>                        
+                        </thead>
+                        <tbody id="tableinfo">                         
+                        </tbody>
+                    </table>
+                </div>            
+                <div class="formAdminDiv">
+                    <form class="formAdmin" id="formAdminId">
+                        <div class="divsFormAdmin">
+                            <label class="labelForm">Nombre</label>
+                            <input class="inputFormText" type="text" id="formName" required>                        
+                        </div>
+                        <div class="divsFormAdmin">
+                            <label class="labelForm">Precio</label>
+                            <input class="inputFormOther" type="number" id="formPrice" min="0" max="300" required>                        
+                        </div>
+                        <div class="divsFormAdmin">
+                            <label class="labelForm">Plataforma</label>
+                            <select class="inputFormOther" name="cars" id="formPlatform" required>
+                                <option value="" selected disabled hidden>Choose</option>
+                                <option value="PC">PC</option>
+                                <option value="PS5">PS5</option>
+                              </select>                        
+                        </div>
+                        <div class="divsFormAdmin">
+                            <label class="labelForm">Genero</label>
+                            <select class="inputFormOther" name="genero" id="formGenero" required>
+                                <option value="" selected disabled hidden>Choose</option>
+                                <option value="Sports">Sports</option>
+                                <option value="Adventure">Adventure</option>
+                                <option value="Strategy">Strategy</option>
+                                <option value="Simulation">Simulation</option>
+                                <option value="Other">Other</option>
+                              </select>                        
+                        </div>
+                        <div class="divsFormAdmin">
+                            <label class="labelForm">Descripcion</label>
+                            <textarea class="inputFormTextArea" style= resize:none id="formDescription" name="formDescription" rows="" cols="90"></textarea>                       
+                        </div>
+                        <div class="divsFormAdmin">
+                            <label class="labelForm">Imagen</label>
+                            <textarea class="inputFormTextArea" style= resize:none id="formImg" name="formImg" rows="5" cols="90"></textarea>                       
+                        </div>
+                        <div class="buttonDiv" id="buttonForm">                            
+                        </div>                    
+                    </form>
+                </div>
+            </div>            
+        </div>    
+    </div>
+    </main>
+    <footer class="mainFooter">
+        <nav class="footerSeparacion">
+            <img src="/img/medios_de_pago/paypal.jpg">
+            <img src="/img/medios_de_pago/tarjcred.jpg">
+            <img src="/img/medios_de_pago/rapipago.jpg">
+            <img src="/img/medios_de_pago/pagofacil.jpg">
+        </nav>
+        <div class="footerInfo">
+            <div class="divFooterInfo">
+                <h2>Información</h2>
+                <p>Quienes somos</p>
+                <p>Cómo comprar</p>
+                <p>Politica de devolucion</p>
+            </div>
+            <div class="divFooterInfo">
+                <h2>Ir a</h2>
+                <a href="index.html">Productos</a>
+                <a href="admin.html">Administrador</a>
+            </div>
+            <div class="divFooterInfo">
+                <h2>Comunidad</h2>
+                <p>Blog</p>
+                <p>Reseñas</p>
+                <p>Foro</p>
+            </div>
+            <div class="divFooterInfo">
+                <h2>Contáctenos</h2>
+                <div>
+                    <a href="https://www.facebook.com/LICHA200044"><img src="/img/redes_sociales/facebook.jpg" class="imgFooter"></a>    
+                    <a href="https://x.com/RacingClub"><img src="/img/redes_sociales/twitter.jpg" class="imgFooter"></a>
+                    <a href="https://www.instagram.com/racingclub/?hl=es-la"><img src="/img/redes_sociales/instagram.jpg" class="imgFooter"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/scrips.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
